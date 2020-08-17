@@ -29,14 +29,23 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how to build stateful class components.
+    Using the constructor method we build stateful class components by calling the super function and passing any neccesary props that the component needs. Next, you define the value of the state variable or variables to be used and create functions to update those state values.
 
 2. Describe the different phases of the component lifecycle.
+    Mounting: this loads the component with its state and props.  The constructor is called, as is componentDidMount.
+    Updating: The value of state variables or props are changed, the component re-renders and calls ComponentDidUpdate.
+    Unmounting: The component is removed from the page.  Actions using ComponentWillUnmount may be utilized to manipulate the DOM, event listeners, etc.
 
 3. Demonstrate an understanding of class component lifecycle methods.
+    ComponentDidMount: runs after the constuctor and after the components completely mounts.
+    ComponentDidUpdate: runs when the value of a state variable or prop changes
+    ComponentDidUnmount: runs when the component is unmounting from the page.
 
 4. Define stateful logic.
+    This is a type of coding that utilizes the concept of state variables to manage data.  Therefore the logic includes methods by which to update state.
 
 5. Describe how to test a React component with React Testing Library.
+    Using the arrange, act, and assert methods, we test a React app by querying elements in the UI to perform actions and check on those actions.  We can then fire those actions to simulate how a user might interact with the UI.  Lastly, we verify that the changes which occur were expected or unexpected.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -50,7 +59,7 @@ _This project uses a local server for the data fetching. You will need three sep
 2. _one for your React app (in the /client folder)_
 3. _and one to run your tests_
 
-_Please follow the setup instructions closely so that you can get everything up and running smoothly_
+<!-- _Please follow the setup instructions closely so that you can get everything up and running smoothly_
 
 **Basic set up**
 
@@ -137,4 +146,4 @@ Follow these steps for completing your project.
 
 - [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo). **Please don't merge your own pull request**
 - [ ] Add your team lead as a reviewer on the pull-request
-- [ ] Your team lead will count the project as complete after receiving your pull-request
+- [ ] Your team lead will count the project as complete after receiving your pull-request -->
