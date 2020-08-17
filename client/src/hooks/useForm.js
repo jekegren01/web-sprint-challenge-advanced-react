@@ -2,7 +2,7 @@
 import {useState} from "react";
 
  export default function(initialState, submit){
-     const [formData, setFormData] = useState({});
+     const [formData, setFormData] = useState(initialState);
 
      const updateFormData = e =>{
          setFormData({
@@ -11,9 +11,9 @@ import {useState} from "react";
          });
      }
 
-     const handleSubmit = (e, action) => {
+     const handleSubmit = e => {
          e.preventDefault();
-         action(formData);
+         submit(formData);
      }
 
      return [formData, updateFormData, handleSubmit];
