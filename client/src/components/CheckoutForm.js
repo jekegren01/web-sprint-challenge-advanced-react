@@ -17,20 +17,21 @@ const initialValue = {
 const CheckoutForm = (props) => {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   // const [values, setValues] = useState(initialValue);
-  const [values, updateValues, handleSubmit] = useForm(initialValue, submit);
-
+  
   // const handleChanges = (e) => {
-  //   setValues({ ...values, [e.target.name]: e.target.value });
-  // };
+    //   setValues({ ...values, [e.target.name]: e.target.value });
+    // };
+    
+    // const handleSubmit = (e) => {
+      //   e.preventDefault();
+      //   setShowSuccessMessage(true);
+      // };
+      
+      const submit = () => {
+        setShowSuccessMessage(true);
+      };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setShowSuccessMessage(true);
-  // };
-
-  const submit = () => {
-    setShowSuccessMessage(true);
-  };
+  const [values, updateValues, handleSubmit] = useForm(initialValue, submit);
 
   return (
     <>
